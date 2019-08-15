@@ -1,0 +1,33 @@
+*
+{
+	box-sizing: border-box;
+}
+
+body
+{
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
+	font-family: 'Roboto', sans-serif;
+}
+
+#carousel
+{
+	width: 100%;
+	height: 60vh;
+	border: 1px solid black;
+}
+
+.visible 
+{
+	display: block;
+}
+
+/* Mục tiêu 
+	- Đặt cho carousel__item background mặc định 1 màu nào đó.
+	- Chỉ cho xuất hiện 1 thẻ h1 theo tên mình ( cho mất đi nhưng không phải xóa html )
+	VD: Mặc định sẽ ẩn. Nếu cái nào có class visible thì sẽ hiện;
+	- Canh thẻ h1 cho nằm giữa tâm carousel__item
+	- Canh 2 thẻ span sao cho 1 cái bên trái, 1 cái bên phải và cùng nằm giữa carousel__item theo chiều dọc
+	- Chỉnh màu sắc, kích thước ... cho 2 thẻ span giống nhau.
+*/
