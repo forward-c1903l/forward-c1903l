@@ -11,29 +11,87 @@ body
 	font-family: 'Roboto', sans-serif;
 }
 
-h1 
+h1
 {
 	margin: 0;
 }
 
 #carousel
 {
+	margin-top: 5rem;
 	width: 100%;
-	height: 60vh;
-	border: 1px solid black;
+	height: 400px;
+	position: relative;
+	overflow: hidden;
 }
 
-#carousel .carousel__item
+#carousel::before
 {
-	background-color: black;
-	height: 100%;
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	background-image: url(./triangle_bg.png);
+	background-size: 26px 10px;
+	background-repeat: repeat-x;
+	height: 10px;
+	transform: rotate(180deg);
 }
 
-.visible 
+#carousel::after
 {
-	display: block;
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-image: url(./triangle_bg.png);
+	background-size: 26px 10px;
+	background-repeat: repeat-x;
+	height: 10px;
 }
 
+.visible
+{
+	display: block !important;
+}
+
+.right
+{
+	animation: EffectRight 2s 1 ease;
+}
+
+.left
+{
+	animation: EffectLeft 2s 1 ease;
+}
+
+@keyframes EffectRight
+{
+	from {
+	    opacity: 0;
+	    transform: translate3d(-500%, 0, 0) rotate3d(0, 0, 1, -120deg) scale(2);
+  	}
+
+  	to {
+	    opacity: 1;
+	    transform: translate3d(0, 0, 0);
+  	}
+}
+
+@keyframes EffectLeft
+{
+	from {
+	    opacity: 0;
+	    transform: translate3d(500%, 0, 0) rotate3d(0, 0, 1, 120deg) scale(2);
+  	}
+
+  	to {
+	    opacity: 1;
+	    transform: translate3d(0, 0, 0);
+  	}
+}
 /* Mục tiêu 
 	- Đặt cho carousel__item background mặc định 1 màu nào đó.
 	- Chỉ cho xuất hiện 1 thẻ h1 theo tên mình ( cho mất đi nhưng không phải xóa html )
@@ -42,3 +100,47 @@ h1
 	- Canh 2 thẻ span sao cho 1 cái bên trái, 1 cái bên phải và cùng nằm giữa carousel__item theo chiều dọc
 	- Chỉnh màu sắc, kích thước ... cho 2 thẻ span giống nhau.
 */
+
+#carousel .carousel__item 
+{
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: 2s;
+}
+
+#carousel .carousel__item .carousel__title
+{
+	color: white;
+	font-size: 40px;
+	display: none;
+}
+
+.icon
+{
+	position: absolute;
+	cursor: pointer;
+	top: 45%;
+	font-size: 35px;
+	color: white !important;
+	opacity: 0.3;
+	transition: 0.5s;
+}
+
+.icon:hover
+{
+	transform: scale(1.2);
+	opacity: 1;
+}
+
+#carousel #arrow-left
+{
+	left: 3%;
+}
+
+#carousel #arrow-right
+{
+	right: 3%;
+}
+
