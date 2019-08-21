@@ -1,5 +1,5 @@
 forward-c1903l
-Note: Sorry if English steam chicken for use google translate hehe.
+Note: Sorry if our's English quiet bad so we use google translate hehe.
 Contents FORWARD group's work. 
 
 - For the Project this disaster plenty of JavaScript so the group decided to implement the following way: 
