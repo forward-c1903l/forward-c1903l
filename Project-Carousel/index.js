@@ -48,6 +48,8 @@ function clickRight(){
 
 	slide.style.backgroundColor = arrayColor[indexPresent]; // set style carousel__item la mau cua array[vi tri hien tai]
 	slide.style.transition = '2s'; // set css triansition
+	name[indexOriginal].classList.remove(visible);//remove class visible cho title ban dau
+	name[indexPresent].classList.add(visible);//add class visible cho title hien tai
 }
 
 arrowLeft.addEventListener('click', clickLeft);//dung EventListener bat su kien click
