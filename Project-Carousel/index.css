@@ -24,6 +24,7 @@ body
 .visible 
 {
 	display: block !important;
+	transition: 2s;
 }
 
 /* Mục tiêu 
@@ -54,7 +55,7 @@ body
 #carousel .icon
 {
 	position: absolute;
-	color: blue;
+	color: white;
 	font-size: 30px;
 	top: 47%;
 	opacity: 0.5;
