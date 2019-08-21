@@ -24,6 +24,7 @@ body
 .visible 
 {
 	display: block !important;
+	transition: 2s;
 }
 
 /* Mục tiêu 
