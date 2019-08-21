@@ -1,8 +1,9 @@
 let arrowLeft = document.getElementById('arrow-left');// lay mui ten trai
 let arrowRight = document.getElementById('arrow-right');// lay mui ten phai
 let slide = document.querySelector('.carousel__item');//lay duoc carousel__item
-let arrayColor = ['black', 'blue', 'yellow', 'red'];//tao mang color
+let arrayColor = ['black', 'blue', 'green', 'red'];//tao mang color
 let indexLast = arrayColor.length - 1; // lay vi tri cuoi cung cua mang
+let name = document.querySelectorAll('.carousel__title');
 
 function clickLeft(){
 	let x = slide.style.backgroundColor;//lay duoc color slide
@@ -24,6 +25,8 @@ function clickLeft(){
 
 	slide.style.backgroundColor = arrayColor[indexPresent]; // set style carousel__item la mau cua array[vi tri hien tai]
 	slide.style.transition = '2s'; // set css triansition
+	name[indexOriginal].classList.remove('visible');//remove class visible cho title ban dau
+	name[indexPresent].classList.add('visible');//add class visible cho title hien tai
 }
 
 function clickRight(){
@@ -46,6 +49,8 @@ function clickRight(){
 
 	slide.style.backgroundColor = arrayColor[indexPresent]; // set style carousel__item la mau cua array[vi tri hien tai]
 	slide.style.transition = '2s'; // set css triansition
+	name[indexOriginal].classList.remove(visible);//remove class visible cho title ban dau
+	name[indexPresent].classList.add(visible);//add class visible cho title hien tai
 }
 
 arrowLeft.addEventListener('click', clickLeft);//dung EventListener bat su kien click
