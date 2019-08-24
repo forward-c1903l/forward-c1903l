@@ -58,11 +58,13 @@ body
 #arrow-left
 {
 	left: 5%;
+	cursor: pointer;
 }
 
 #arrow-right
 {
 	right: 5%;
+	cursor: pointer;
 }
 
 /* Mục tiêu
